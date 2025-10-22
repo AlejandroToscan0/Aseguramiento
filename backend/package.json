@@ -4,7 +4,7 @@
   "description": "Backend para tienda de tenis",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "dev": "nodemon index.js",
     "test": "jest --verbose --forceExit --detectOpenHandles",
     "test:coverage": "nyc --reporter=lcov --reporter=text npm test",

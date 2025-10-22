@@ -1,5 +1,5 @@
 {
-  "name": "tennis-frontend",
+  "name": "tienda-online-root",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "concurrently -n backend,frontend -c green,cyan \"npm --prefix ./backend run start\" \"npm --prefix ./tennis-frontend run start\""
   },
   "prettier": {
     "overrides": [
@@ -39,6 +40,7 @@
     "@angular/cli": "^20.1.0",
     "@angular/compiler-cli": "^20.1.0",
     "@types/jasmine": "~5.1.0",
+    "concurrently": "^9.0.0",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
