@@ -1,0 +1,34 @@
+{
+  "name": "tennis-store-backend",
+  "version": "1.0.0",
+  "description": "Backend para tienda de tenis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --verbose --forceExit --detectOpenHandles",
+    "test:coverage": "nyc --reporter=lcov --reporter=text npm test",
+    "coverage:check": "nyc check-coverage --lines 90 --functions 90 --branches 90",
+    "ci:test": "npm run test:coverage && npm run coverage:check",
+    "test:watch": "jest --watch --forceExit --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "bcryptjs": "^3.0.2",
+    "jest": "^30.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.3",
+    "nodemon": "^3.1.10",
+    "nyc": "^17.1.0",
+    "sinon": "^21.0.0",
+    "supertest": "^7.1.4"
+  }
+}
